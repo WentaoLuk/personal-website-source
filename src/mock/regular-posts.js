@@ -1,39 +1,27 @@
 export default [
     {
-        title: 'My Other Posts',
+        title: 'My First Diary1',
         date: '2021-5-15',
         categories: ['daily', 'life'],
         link: '#',
         image: 'first_diary.jpeg'
     }, {
-        title: 'My Other Posts With Longer title',
-        date: '2021-5-15',
-        categories: ['daily', 'life'],
-        link: '#',
-        image: 'second_day.jpeg'
-    }, {
-        title: 'My Other Posts with long title',
+        title: 'My Second Diary2',
         date: '2021-5-15',
         categories: ['daily', 'life'],
         link: '#',
         image: 'first_diary.jpeg'
     }, {
-        title: 'My Other Posts',
+        title: 'My Third Diary3',
         date: '2021-5-15',
         categories: ['daily', 'life'],
         link: '#',
         image: 'first_diary.jpeg'
     }, {
-        title: 'My Other Posts',
+        title: 'My Fourth Diary4',
         date: '2021-5-15',
         categories: ['daily', 'life'],
         link: '#',
         image: 'first_diary.jpeg'
-    }, {
-        title: 'My Other Posts(last)',
-        date: '2021-5-15',
-        categories: ['daily', 'life'],
-        link: '#',
-        image: 'first_diary.jpeg'
-    }
+    },
 ]

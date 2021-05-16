@@ -2,10 +2,20 @@
 @import url(./_post-masonry.scss);
 
 
+@import "./variables";
+
+
+
 .home {
     h1{
         width: 100%;
         // color: $text-color;
         
     }
+
+    .regular-posts-container {
+        // display: flex;
+        width: 100%;
+    }
+
 }
