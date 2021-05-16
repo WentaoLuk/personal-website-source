@@ -18,19 +18,20 @@ const MasonryPost = ({ post, tagsOnTop }) => {
     const style = { ...imageBackground, ...post.style }
 
     return (
-        <a className="masonry-post overlay" style={style} href={post.link}>
-            <div className='tags-container'>
-                {post.categories.map((tag, index) =>
-                    <span key={index} className='tag' style={{ backgroundColor: categoryColors[tag] }}>
-                        {tag.toUpperCase()}
-                    </span>
-                )}
+        <a className="masonry-post " style={style} href={post.link}>
+            <div className='overlay'>
+                <div className='tags-container'>
+                    {post.categories.map((tag, index) =>
+                        <span key={index} className='tag' style={{ backgroundColor: categoryColors[tag] }}>
+                            {tag.toUpperCase()}
+                        </span>
+                    )}
+                </div>
+                <div className='image-text' style={{ justifyContent: 'flex-end' }}>
+                    <h2 className='image-title'>{post.title}</h2>
+                    <span className='image-date'>{post.date}</span>
+                </div>
             </div>
-            <div className='image-text'>
-                <h2 className='image-title'>{post.title}</h2>
-                <span className='image-date'>{post.date}</span>
-            </div>
-
         </a>
     )
 }

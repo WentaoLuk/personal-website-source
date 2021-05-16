@@ -26,7 +26,7 @@ const Footer = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url || 'https://github.com/WentaoLuk'}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
@@ -38,8 +38,8 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          Credit: {' '}
-          <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
+          Credit for building the home page: {' '}
+          <a href="https://github.com/WentaoLuk" target="_blank" rel="noopener noreferrer">
             Jacobo Martínez
           </a>
         </p>

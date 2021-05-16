@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { MenuItems } from "./MenuItems"
 import { Link } from 'react-scroll';
 import './Navbar.css'
+
 // import { Button } from "../Button"
 
 class Navbar extends Component {
@@ -12,9 +13,10 @@ class Navbar extends Component {
 
     render() {
         return (
-            // <i className='fab fa-react'></i>
             <nav className='NavbarItems'>
-                <h1 className='navbar-logo'>Wentao Lu  </h1>
+                <a href="/">
+                    <h1 className='navbar-logo'>Wentao Lu  </h1>
+                </a>
                 <div className='menu-icon' onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>

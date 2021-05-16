@@ -1,3 +1,4 @@
+import Pdf from '../pdf/Resume_of_Wentao_Lu.pdf';
 
 
 export const MenuItems = [
@@ -14,8 +15,8 @@ export const MenuItems = [
         url: '#',
         cName: 'nav-links'
     }, {
-        title: 'About me',
-        url: '#',
+        title: 'Resume',
+        url: Pdf,
         cName: 'nav-links'
     },
     // {

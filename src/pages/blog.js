@@ -1,16 +1,15 @@
-import React from "react"
-import Hero from '../components/Hero/Hero';
-import About from '../components/About/About';
-import Projects from '../components/Projects/Projects';
-import Contact from '../components/Contact/Contact';
-import Footer from '../components/Footer/Footer';
+import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar/Navbar'
-
-import { MasonryPost, PostMasonry } from '../components/common/'
+import { PostMasonry } from '../components/common/'
 import OtherPosts from '../mock/other-posts'
 import RegularPosts from '../mock/regular-posts'
-
 import '../components/css/_base.scss'
+
+
+import Footer from '../components/Footer/Footer';
+import { footerData } from '../mock/data';
+import { PortfolioProvider } from '../context/context';
+
 
 const regularPostsConfig = {
     0: {
@@ -48,26 +47,38 @@ mergeStyles(OtherPosts, otherPostsCOnfig)
 
 // const lastRegularPost = RegularPosts.pop()
 
+
 export default function blog() {
+
+    const [footer, setFooter] = useState({});
+    useEffect(() => {
+        setFooter({ ...footerData });
+    }, []);
+
     return (
-
         // <About />
+        <main>
+            <Navbar />
+            <section className='container home'>
+                <div className='row'>
+                    <h1 style={{ fontSize: '20px' }}>[Uptade: 2015-05-16]Please notice that the blog function is under construction and will be finished in 3 days~ Thanks</h1>
+                    {/* <h1>Blog</h1> */}
+                    <section className='regular-posts-container'>
+                        <PostMasonry posts={RegularPosts} columns={3} tagsOnTop={true} />
+                    </section>
 
-        <section className='container home'>
-            <div className='row'>
-                <h1>Blog</h1>
-                <section className='regular-posts-container'>
-                    <PostMasonry posts={RegularPosts} columns={3} tagsOnTop={true} />
-                    {/* <MasonryPost post={lastRegularPost} tagsOnTop={true} /> */}
-                </section>
-
-                <h1>Personal Life</h1>
-                {/* Passing the post from Other posts */}
-                <PostMasonry posts={OtherPosts} columns={3} />
+                    <h1>Gallery</h1>
+                    {/* Passing the post from Other posts */}
+                    <PostMasonry posts={OtherPosts} columns={3} />
 
 
-            </div>
-        </section>
+                </div>
+            </section>
+            <PortfolioProvider value={{ footer }}>
+                <Footer />
+            </PortfolioProvider>
 
+
+        </main>
     )
 }

@@ -29,11 +29,5 @@ export default [
         categories: ['daily', 'life'],
         link: '#',
         image: 'first_diary.jpeg'
-    }, {
-        title: 'My Other Posts(last)',
-        date: '2021-5-15',
-        categories: ['daily', 'life'],
-        link: '#',
-        image: 'first_diary.jpeg'
-    }
+    },
 ]
