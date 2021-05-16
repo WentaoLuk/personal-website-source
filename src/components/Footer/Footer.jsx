@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          Credit for building the home page: {' '}
+          The landing page template (Not including navbar, resume link and blog function) is initially retrieved from: {' '}
           <a href="https://github.com/WentaoLuk" target="_blank" rel="noopener noreferrer">
             Jacobo Martínez
           </a>

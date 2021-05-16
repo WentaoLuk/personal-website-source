@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar/Navbar'
-import { PostMasonry } from '../components/common/'
-import OtherPosts from '../mock/other-posts'
-import RegularPosts from '../mock/regular-posts'
+import { PostMasonry, PostGrid } from '../components/common/'
+import { RegularPosts } from '../mock/data'
+import { OtherPosts } from '../mock/data'
 import '../components/css/_base.scss'
 
 
@@ -39,8 +39,14 @@ const otherPostsCOnfig = {
 const mergeStyles = function (posts, config) {
     posts.forEach((post, index) => {
         post.style = config[index]
+        post.author = 'Wentao Lu'
+        post.discription = "This is the post discription."
     })
 }
+
+// The extra post aggregation will be displayed in the second page
+const recentPosts = [...OtherPosts, ...RegularPosts, ...RegularPosts]
+
 
 mergeStyles(RegularPosts, regularPostsConfig)
 mergeStyles(OtherPosts, otherPostsCOnfig)
@@ -58,22 +64,28 @@ export default function blog() {
     return (
         // <About />
         <main>
+
+
             <Navbar />
             <section className='container home'>
                 <div className='row'>
-                    <h1 style={{ fontSize: '20px' }}>[Uptade: 2015-05-16]Please notice that the blog function is under construction and will be finished in 3 days~ Thanks</h1>
-                    {/* <h1>Blog</h1> */}
+                    <h1 style={{ fontSize: '20px' }}>[Uptade: 2015-05-16]Please notice that the blog function is still under construction and will be finished in 3 days~ Thank you for stopping by!</h1>
                     <section className='regular-posts-container'>
                         <PostMasonry posts={RegularPosts} columns={3} tagsOnTop={true} />
+                        <section>
+                            <div>
+                                <PostGrid posts={recentPosts} />
+                            </div>
+                        </section>
+                        <PostMasonry posts={OtherPosts} columns={3} />
+
+
+
+
                     </section>
-
-                    <h1>Gallery</h1>
-                    {/* Passing the post from Other posts */}
-                    <PostMasonry posts={OtherPosts} columns={3} />
-
-
                 </div>
             </section>
+
             <PortfolioProvider value={{ footer }}>
                 <Footer />
             </PortfolioProvider>

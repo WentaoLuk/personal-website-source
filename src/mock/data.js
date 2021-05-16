@@ -100,3 +100,74 @@ export const footerData = {
 export const githubButtons = {
   isEnabled: true, // set to false to disable the GitHub stars/fork buttons
 };
+
+export const OtherPosts = [
+  {
+    title: 'My Other Posts',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Other Posts With Longer title',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'second_day.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Other Posts with long title',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Other Posts',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Other Posts',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  },
+]
+
+export const RegularPosts = [
+  {
+    title: 'My First Diary1',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Second Diary2',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Third Diary3',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }, {
+    title: 'My Fourth Diary4',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts"
+  }
+]

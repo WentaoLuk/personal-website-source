@@ -5,7 +5,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
-import Popup from '../Image/Popup';
 
 
 
@@ -14,7 +13,6 @@ const Projects = () => {
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [buttonPopup, setButtonPopup] = useState(false);
 
   function selectLink(props) {
     switch (props) {
@@ -85,7 +83,6 @@ const Projects = () => {
                         </a>
                       )}
                     </div>
-                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
                   </Fade>
                 </Col>
                 <Col lg={8} sm={12}>

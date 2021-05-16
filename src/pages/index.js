@@ -13,7 +13,7 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{title || 'Wentao Lu - Computer Science Student at Algonquin'}</title>
+        <title>{title || 'Wentao Lu -- Computer Science Student at Algonquin'}</title>
         <html lang={lang || 'en'} />
         <meta name="description" content={description || 'Wentao Lu Simplefolio'} />
         <script src="https://kit.fontawesome.com/b18013c08b.js" crossorigin="anonymous"></script>
