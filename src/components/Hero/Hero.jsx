@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import '../../components/css/_base.scss'
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -33,6 +34,13 @@ const Header = () => {
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+          <p className="my-blog-button hero-cta">
+            <span className="cta-btn cta-btn--hero">
+              <a className='' href="/blog">
+                {cta || 'Check Out My Blog!'}
+              </a>
+            </span>
+          </p>
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>

@@ -39,7 +39,7 @@ const Footer = () => {
         <hr />
         <p className="footer__text">
           The landing page template (Not including navbar, resume link and blog function) is initially retrieved from: {' '}
-          <a href="https://github.com/WentaoLuk" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/cobidev/gatsby-simplefolio" target="_blank" rel="noopener noreferrer">
             Jacobo Martínez
           </a>
         </p>

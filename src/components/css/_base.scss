@@ -1,33 +1,54 @@
-
 @import url(./_masonry-post.scss);
 @import url(./_post-masonry.scss);
 @import url(./_tag-row.scss);
 @import url(./_post-grid.scss);
 @import url(./_popup.scss);
-
+@import url(../../style/vendor/css/font-awesome.min.css);
 
 @import "./variables";
 @import "../../style/abstracts/variables";
 
-
-
+.bulletin {
+    padding: 5px;
+    border-radius: 2px;
+    border: $theme-color 2px solid;
+}
 
 .home {
-    h1{
+    h1 {
         width: 100%;
         // color: $text-color;
-        
     }
 
     .regular-posts-container {
         // display: flex;
         width: 100%;
-            }
+    }
 
-
-.grid-row li {
-    display: inline-block;
+    .grid-row li {
+        display: inline-block;
+    }
 }
 
-}
+// .jumbotron .my-blog-button {
+//     a {
+//         text-decoration: none;
+//         color: rgb(191, 90, 242);
+//     }
+// }
 
+@media screen and (min-width: 600px) {
+    .jumbotron .my-blog-button {
+        a {
+            text-decoration: none;
+        }
+    }
+    .jumbotron .my-blog-button:hover {
+        a {
+            color: white;
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}

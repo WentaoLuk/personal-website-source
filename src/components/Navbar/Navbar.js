@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { MenuItems } from "./MenuItems"
 import { Link } from 'react-scroll';
+import Pdf from '../pdf/Resume_of_Wentao_Lu.pdf';
 import './Navbar.css'
 
 // import { Button } from "../Button"
@@ -31,13 +32,21 @@ class Navbar extends Component {
                             </a></li>
                         )
                     })}
-                    <a className='nav-links inner-link'><Link to="footer" smooth duration={1000}>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer "
+                        className="nav-links inner-link"
+                        href={Pdf}
+                    >
+                        Resume
+                    </a>
+                    <Link to="footer" className='nav-links inner-link' smooth duration={1000}>
                         Contact
-                    </Link></a>
+                    </Link>
 
                 </ul>
 
-            </nav>
+            </nav >
         )
     }
 }

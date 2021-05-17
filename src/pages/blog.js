@@ -74,16 +74,20 @@ export default function blog() {
 
             <section className='container home'>
                 <div className='row'>
-                    <h1 style={{ fontSize: '20px' }}>[Uptade: 2015-05-16]Please notice that the blog function is still under construction and will be finished in 3 days~ Thank you for stopping by!</h1>
+                    <h1 className='bulletin'>[Uptade: 2021-05-17]Please notice that some of the blog functions are still under construction and will be finished in 3 days~ Thank you for stopping by!</h1>
+                    <h1 className='bulletin' style={{ color: 'red' }}> If you are revisiting this website, please clear your browser's cache or use Incognito mode to see the latest update. </h1>
+
                     <section className='regular-posts-container'>
+                        <h1>Diary</h1>
                         <PostMasonry setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={RegularPosts} columns={3} tagsOnTop={true} />
+                        <hr class="dashed"></hr>
                         <section>
                             <div>
                                 <PostGrid setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={recentPosts} />
                             </div>
                         </section>
+                        <hr class="dashed"></hr>
                         <PostMasonry setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={OtherPosts} columns={3} />
-
                     </section>
                 </div>
             </section>

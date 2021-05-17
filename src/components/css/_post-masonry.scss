@@ -1,7 +1,15 @@
 .masonry {
+    // background-color: pink;
     display: grid;
     grid-gap: 30px;
 }
+
+// hr.dashed {
+//     margin-top: 60px;
+//     margin-left: -50%;
+//     width: 200%;
+//     border-top: 2px double #01b3af;
+// }
 
 @media screen and (max-width: 900px) {
     .masonry {

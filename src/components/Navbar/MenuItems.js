@@ -14,10 +14,6 @@ export const MenuItems = [
         title: 'Gallery',
         url: '#',
         cName: 'nav-links'
-    }, {
-        title: 'Resume',
-        url: Pdf,
-        cName: 'nav-links'
     },
     // {
     //     title: 'Contact',

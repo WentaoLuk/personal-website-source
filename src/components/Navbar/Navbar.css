@@ -41,7 +41,7 @@
 }
 
 .inner-link {
-    padding: 0;
+    padding: 0 8px;
 }
 
 .inner-link:hover {

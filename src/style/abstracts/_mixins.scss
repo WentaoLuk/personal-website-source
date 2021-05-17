@@ -23,6 +23,10 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
+      .my-blog-button a {
+        text-decoration: none;
+        color: #00cdac;
+      }
     } //0 - 600px
   }
   // Table Portrait
