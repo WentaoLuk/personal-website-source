@@ -101,6 +101,44 @@ export const githubButtons = {
   isEnabled: true, // set to false to disable the GitHub stars/fork buttons
 };
 
+
+
+export const RegularPosts = [
+  {
+    title: 'How I Made My Blog Work',
+    date: '2021-5-17',
+    categories: ['geek', 'study'],
+    link: '#',
+    image: 'post1.jpeg',
+    description: "Briefly introduce my blog and how I built it.",
+    detail: " <p>Hi! Finally! I (almost--) finished building my blog.</p> <p>This may not be a real blog since the website is built on GitHub, and GitHub is only to host static pages. But I am still feeling good because it is the first website I built for myself. Now let's take a look at what I have done on this project. </p> <p> First of all, the website is built by ReactJS. The landing page is a template provided by Jacobo Martínez on Gatsby. So I pulled the whole template from his GitHub. It did save me a lot of initial work. (Big thanks for this wonderful template! I linked his GitHub page down in the footer of this website.) </p> <p> The blog is built on React. Since I cannot deploy the backend on GitHub Pages, everything has to be static. So all these words you are reading, all the tags are all put inside as arrays in a 'warehouse', which is the mock.js. Thus you will notice that when you click on any of the articles, the page will not be refreshed. Everything here is JavaScript. </p> <p> The blog pages is divided into three sections. Each of them is displayed as a grid. You might have noticed that the the second section is the aggregation of the first and third section, but displayed in a different way. I also put a paginate function down below, but since I currently do not have a lot of articles, I decided to save it for later use. </p> <p> The popup window is built as a component and hid by default until you click any of the articles. Then it will pass the title, tags, and the content as an array right into the Popup component to be displayed, then the window pops up. </p> <p> That's how I built my blog. I hope you enjoy browsing my blog. </p> <br/><p>Wentao</p>"
+  }, {
+    title: 'My Second Diary2',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts",
+    detail: "This is the detail"
+  }, {
+    title: 'My Third Diary3',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts",
+    detail: "This is the detail"
+  }, {
+    title: 'My Fourth Diary4',
+    date: '2021-5-15',
+    categories: ['daily', 'life'],
+    link: '#',
+    image: 'first_diary.jpeg',
+    description: "This is the description of the posts",
+    detail: "This is the detail"
+  }
+]
+
 export const OtherPosts = [
   {
     title: 'My Other Posts',
@@ -108,66 +146,39 @@ export const OtherPosts = [
     categories: ['daily', 'life'],
     link: '#',
     image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
+    description: "This is the description of the posts",
+    detail: "This is the detail"
   }, {
     title: 'My Other Posts With Longer title',
     date: '2021-5-15',
     categories: ['daily', 'life'],
     link: '#',
     image: 'second_day.jpeg',
-    description: "This is the description of the posts"
+    description: "This is the description of the posts",
+    detail: "This is the detail"
   }, {
     title: 'My Other Posts with long title',
     date: '2021-5-15',
     categories: ['daily', 'life'],
     link: '#',
     image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
+    description: "This is the description of the posts",
+    detail: "This is the detail"
   }, {
     title: 'My Other Posts',
     date: '2021-5-15',
     categories: ['daily', 'life'],
     link: '#',
     image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
+    description: "This is the description of the posts",
+    detail: "This is the detail"
   }, {
     title: 'My Other Posts',
     date: '2021-5-15',
     categories: ['daily', 'life'],
     link: '#',
     image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
+    description: "This is the description of the posts",
+    detail: "This is the detail"
   },
-]
-
-export const RegularPosts = [
-  {
-    title: 'My First Diary1',
-    date: '2021-5-15',
-    categories: ['daily', 'life'],
-    link: '#',
-    image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
-  }, {
-    title: 'My Second Diary2',
-    date: '2021-5-15',
-    categories: ['daily', 'life'],
-    link: '#',
-    image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
-  }, {
-    title: 'My Third Diary3',
-    date: '2021-5-15',
-    categories: ['daily', 'life'],
-    link: '#',
-    image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
-  }, {
-    title: 'My Fourth Diary4',
-    date: '2021-5-15',
-    categories: ['daily', 'life'],
-    link: '#',
-    image: 'first_diary.jpeg',
-    description: "This is the description of the posts"
-  }
 ]

@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="footer navbar-static-bottom">
       <Container>
         <span className="back-to-top">
-          <Link to="hero" smooth duration={1000}>
+          <Link onClick={() => { window.scroll({ top: 0, left: 0, behavior: 'smooth' }); }}>
             <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
           </Link>
         </span>

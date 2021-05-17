@@ -10,7 +10,7 @@ import { TagRow } from './'
  * @param {*} param0 
  * @returns only return the current slice of page.
  */
-const PostGrid = ({ posts }) => {
+const PostGrid = ({ posts, setTrigger, setPopupAllmessage }) => {
     // only 9 records at a time
 
     const [pageSize, setPageSize] = useState(9)
@@ -25,6 +25,15 @@ const PostGrid = ({ posts }) => {
         return posts.slice(firstIndex, lastIndex)
     }, [current, pageSize, posts]
     )
+    // Everytime when the page changes, it will scroll up for the user.In other words, the dependencies will be[current, pageSize]
+    // useEffect(() => {
+    //     window.scroll({
+    //         top: 500,
+    //         left: 0,
+    //         behavior: 'smooth'
+    //     })
+    // })
+
 
     return (
 
@@ -35,27 +44,49 @@ const PostGrid = ({ posts }) => {
                 {paginatedPosts.map((post, index) => (
                     <div className='post-container'>
                         <figure>
-                            <Link to={post.link}>
-                                <img src={require(`../BlogImage/${post.image}`)} alt={post.image} />
-                            </Link>
-                        </figure>
-                        <TagRow tags={post.categories} />
-                        <h2>{post.title}</h2>
-                        <p className='author-text'>
-                            <span>
-                                By:
+                            <img src={require(`../BlogImage/${post.image}`)} alt={post.image}
+                                onClick={() => {
+                                    setPopupAllmessage([
+                                        {
+                                            title: post.title,
+                                            categories: post.categories,
+                                            imageLink: post.image,
+                                            description: post.description,
+                                            detail: post.detail
+                                        }
+                                    ]);
+                                    setTrigger(true);
+                                }}
+                            />
+                            <TagRow tags={post.categories} />
+                            <h2>{post.title}</h2>
+                            <p className='author-text'>
+                                <span>
+                                    By:
                             <Link to={``}>
-                                    {post.author}
-                                </Link>
-                            </span>
-                            <span>
-                                - {post.date}
-                            </span>
-                        </p>
-                        <p className='description-text'>
-                            {post.description}
-                        </p>
-                        <Link to={post.link}>Read More...</Link>
+                                        {post.author}
+                                    </Link>
+                                </span>
+                                <span>
+                                    - {post.date}
+                                </span>
+                            </p>
+                            <p className='description-text'>
+                                {post.description}
+                            </p>
+                            <div className='read-more' onClick={() => {
+                                setPopupAllmessage([
+                                    {
+                                        title: post.title,
+                                        categories: post.categories,
+                                        imageLink: post.image,
+                                        description: post.description,
+                                        detail: post.detail
+                                    }
+                                ]);
+                                setTrigger(true);
+                            }}>Read More...</div>
+                        </figure>
                     </div>
                 ))}
 

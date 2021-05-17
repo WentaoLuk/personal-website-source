@@ -8,13 +8,13 @@ import { MasonryPost } from '.'
  * @param {*}  
  * @returns 
  */
-const PostMasonry = ({ posts, columns, tagsOnTop }) => {
+const PostMasonry = ({ posts, columns, tagsOnTop, setTrigger, setPopupAllmessage }) => {
     return (
         // setting up the grid columns
         <section className='masonry' style={{ gridTemplateColumns: `repeat(${columns},minmax(275px, 1fr))` }}>
             {posts.map(
                 (post, index) =>
-                    <MasonryPost {...{ post, index, tagsOnTop, key: index }} />
+                    <MasonryPost {...{ post, index, tagsOnTop, key: index }} setTrigger={setTrigger} setPopupAllmessage={setPopupAllmessage} />
             )
             }
 

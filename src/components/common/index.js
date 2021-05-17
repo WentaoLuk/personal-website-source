@@ -6,11 +6,13 @@ import TagRow from './Tag-row'
 import MasonryPost from './Masonry-post'
 import PostMasonry from './Post-masonry'
 import PostGrid from './Post-grid'
+import Popup from './Popup'
 
 
 export {
     MasonryPost,
     PostMasonry,
     PostGrid,
-    TagRow
+    TagRow,
+    Popup
 }

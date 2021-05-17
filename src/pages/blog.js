@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar/Navbar'
-import { PostMasonry, PostGrid } from '../components/common/'
+import { PostMasonry, PostGrid, Popup } from '../components/common/'
 import { RegularPosts } from '../mock/data'
 import { OtherPosts } from '../mock/data'
 import '../components/css/_base.scss'
@@ -9,6 +9,7 @@ import '../components/css/_base.scss'
 import Footer from '../components/Footer/Footer';
 import { footerData } from '../mock/data';
 import { PortfolioProvider } from '../context/context';
+import SkeletonButton from "antd/lib/skeleton/Button"
 
 
 const regularPostsConfig = {
@@ -45,7 +46,7 @@ const mergeStyles = function (posts, config) {
 }
 
 // The extra post aggregation will be displayed in the second page
-const recentPosts = [...OtherPosts, ...RegularPosts, ...RegularPosts]
+const recentPosts = [...OtherPosts, ...RegularPosts]
 
 
 mergeStyles(RegularPosts, regularPostsConfig)
@@ -60,27 +61,28 @@ export default function blog() {
     useEffect(() => {
         setFooter({ ...footerData });
     }, []);
+    const [popupState, setPopupState] = useState(false);
+    const [popupAllMeesage, setPopupAllmessage] = useState([])
+
 
     return (
         // <About />
         <main>
-
-
             <Navbar />
+            <Popup trigger={popupState} setTrigger={setPopupState} arrayMessage={popupAllMeesage}>
+            </Popup>
+
             <section className='container home'>
                 <div className='row'>
                     <h1 style={{ fontSize: '20px' }}>[Uptade: 2015-05-16]Please notice that the blog function is still under construction and will be finished in 3 days~ Thank you for stopping by!</h1>
                     <section className='regular-posts-container'>
-                        <PostMasonry posts={RegularPosts} columns={3} tagsOnTop={true} />
+                        <PostMasonry setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={RegularPosts} columns={3} tagsOnTop={true} />
                         <section>
                             <div>
-                                <PostGrid posts={recentPosts} />
+                                <PostGrid setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={recentPosts} />
                             </div>
                         </section>
-                        <PostMasonry posts={OtherPosts} columns={3} />
-
-
-
+                        <PostMasonry setPopupAllmessage={setPopupAllmessage} setTrigger={setPopupState} posts={OtherPosts} columns={3} />
 
                     </section>
                 </div>
@@ -89,8 +91,6 @@ export default function blog() {
             <PortfolioProvider value={{ footer }}>
                 <Footer />
             </PortfolioProvider>
-
-
         </main>
     )
 }
