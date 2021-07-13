@@ -24,7 +24,6 @@ class Navbar extends Component {
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (
-
                             <li key={index}><a
                                 className={item.cName}
                                 href={item.url}
@@ -40,6 +39,9 @@ class Navbar extends Component {
                     >
                         Resume
                     </a>
+                    <Link to="projects" className='nav-links inner-link' smooth duration={1000}>
+                        Projects
+                    </Link>
                     <Link to="footer" className='nav-links inner-link' smooth duration={1000}>
                         Contact
                     </Link>

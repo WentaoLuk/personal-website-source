@@ -9,12 +9,14 @@ function Popup(props) {
     return (props.trigger) ? (
 
         <div className='pop-window'>
-            <div className="popup-inner" tabindex="0" onBlur={() => props.setTrigger(false)}>
+            <div className="popup-inner">
                 {/* the setTrigger in here is the pointer of setPopupState. Thus changing the set Trigger is actually changing the setPopupState itself. 
                 Meaning: setPopupState(false) */}
                 {props.arrayMessage.map(message => (
                     <div className='inner-layout'>
-
+                        <br />
+                        <br />
+                        <br />
                         <div className='tag'><TagRow tags={message.categories} /></div>
                         <h1 className='title'>{message.title}</h1>
                         {/* <div className='image'>{message.image}</div>
@@ -26,7 +28,7 @@ function Popup(props) {
                 ))}
                 <button className='close-button' onClick={() => props.setTrigger(false)}>close</button>
             </div>
-        </div>
+        </div >
     ) : "";
 }
 

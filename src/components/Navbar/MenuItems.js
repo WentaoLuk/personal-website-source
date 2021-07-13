@@ -10,10 +10,6 @@ export const MenuItems = [
         title: 'Blog',
         url: '/blog',
         cName: 'nav-links'
-    }, {
-        title: 'Gallery',
-        url: '#',
-        cName: 'nav-links'
     },
     // {
     //     title: 'Contact',

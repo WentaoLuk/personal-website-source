@@ -71,10 +71,8 @@ export default function blog() {
             <Navbar />
             <Popup trigger={popupState} setTrigger={setPopupState} arrayMessage={popupAllMeesage}>
             </Popup>
-
             <section className='container home'>
                 <div className='row'>
-                    <h1 className='bulletin'>[Uptade: 2021-05-17]Please notice that some of the blog functions are still under construction and will be finished in 3 days~ Thank you for stopping by!</h1>
                     <h1 className='bulletin' style={{ color: 'red' }}> If you are revisiting this website, please clear your browser's cache or use Incognito mode to see the latest update. </h1>
 
                     <section className='regular-posts-container'>

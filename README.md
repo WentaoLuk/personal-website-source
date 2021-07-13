@@ -4,5 +4,7 @@
 ⚡️ Pages Layout built with React\
 ⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
 ⚡️ The basic landing page was retrived from  **[Jacobo Martínez](https://github.com/cobidev/gatsby-simplefolio)**\
+⚡️ I modified the page by adding Navbar, blog page and popup function.
+
 
 
